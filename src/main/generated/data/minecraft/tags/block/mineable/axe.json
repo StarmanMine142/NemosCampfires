@@ -1,0 +1,22 @@
+{
+  "values": [
+    "nemos-campfires:acacia_campfire",
+    "nemos-campfires:acacia_soul_campfire",
+    "nemos-campfires:birch_campfire",
+    "nemos-campfires:birch_soul_campfire",
+    "nemos-campfires:cherry_campfire",
+    "nemos-campfires:cherry_soul_campfire",
+    "nemos-campfires:crimson_campfire",
+    "nemos-campfires:crimson_soul_campfire",
+    "nemos-campfires:dark_oak_campfire",
+    "nemos-campfires:dark_oak_soul_campfire",
+    "nemos-campfires:jungle_campfire",
+    "nemos-campfires:jungle_soul_campfire",
+    "nemos-campfires:mangrove_campfire",
+    "nemos-campfires:mangrove_soul_campfire",
+    "nemos-campfires:spruce_campfire",
+    "nemos-campfires:spruce_soul_campfire",
+    "nemos-campfires:warped_campfire",
+    "nemos-campfires:warped_soul_campfire"
+  ]
+}
