@@ -3,18 +3,15 @@ package com.nemonotfound.nemoscampfires.datagen.langdatagen;
 import com.nemonotfound.nemoscampfires.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.core.HolderLookup;
-
-import java.util.concurrent.CompletableFuture;
 
 public class GermanLanguageProvider extends FabricLanguageProvider {
 
-    public GermanLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
-        super(dataOutput, "de_de", registryLookup);
+    public GermanLanguageProvider(FabricDataOutput dataOutput) {
+        super(dataOutput, "de_de");
     }
 
     @Override
-    public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(ModBlocks.ACACIA_CAMPFIRE, "Akazienlagerfeuer");
         translationBuilder.add(ModBlocks.ACACIA_SOUL_CAMPFIRE, "Akazienseelenlagerfeuer");
         translationBuilder.add(ModBlocks.BIRCH_CAMPFIRE, "Birkenlagerfeuer");

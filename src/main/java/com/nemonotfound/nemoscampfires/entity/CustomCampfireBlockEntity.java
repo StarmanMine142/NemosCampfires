@@ -2,10 +2,7 @@ package com.nemonotfound.nemoscampfires.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
-import net.minecraft.core.component.DataComponentMap;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -14,8 +11,10 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.ItemContainerContents;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.CampfireCookingRecipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -126,10 +125,10 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
     }
 
     @Override
-    protected void loadAdditional(CompoundTag compoundTag, HolderLookup.Provider provider) {
-        super.loadAdditional(compoundTag, provider);
+    public void load(CompoundTag compoundTag) {
+        super.load(compoundTag);
         this.items.clear();
-        ContainerHelper.loadAllItems(compoundTag, this.items, provider);
+        ContainerHelper.loadAllItems(compoundTag, this.items);
 
         if (compoundTag.contains("CookingTimes", 11)) {
             int[] cookingTimes = compoundTag.getIntArray("CookingTimes");
@@ -143,9 +142,9 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
     }
 
     @Override
-    protected void saveAdditional(CompoundTag compoundTag, HolderLookup.Provider provider) {
-        super.saveAdditional(compoundTag, provider);
-        ContainerHelper.saveAllItems(compoundTag, this.items, true, provider);
+    public void saveAdditional(CompoundTag compoundTag) {
+        super.saveAdditional(compoundTag);
+        ContainerHelper.saveAllItems(compoundTag, this.items, true);
         compoundTag.putIntArray("CookingTimes", this.cookingProgress);
         compoundTag.putIntArray("CookingTotalTimes", this.cookingTime);
     }
@@ -155,9 +154,9 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
     }
 
     @Override
-    public @NotNull CompoundTag getUpdateTag(HolderLookup.Provider provider) {
+    public @NotNull CompoundTag getUpdateTag() {
         CompoundTag compoundTag = new CompoundTag();
-        ContainerHelper.saveAllItems(compoundTag, this.items, true, provider);
+        ContainerHelper.saveAllItems(compoundTag, this.items, true);
 
         return compoundTag;
     }
@@ -199,22 +198,5 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
         if (this.level != null) {
             this.markUpdated();
         }
-    }
-
-    @Override
-    protected void applyImplicitComponents(BlockEntity.DataComponentInput dataComponentInput) {
-        super.applyImplicitComponents(dataComponentInput);
-        dataComponentInput.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).copyInto(this.getItems());
-    }
-
-    @Override
-    protected void collectImplicitComponents(DataComponentMap.Builder builder) {
-        super.collectImplicitComponents(builder);
-        builder.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(this.getItems()));
-    }
-
-    @Override
-    public void removeComponentsFromTag(CompoundTag compoundTag) {
-        compoundTag.remove("Items");
     }
 }

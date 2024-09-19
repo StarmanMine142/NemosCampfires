@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "nemos-campfires:acacia_campfire",
     "nemos-campfires:acacia_soul_campfire",

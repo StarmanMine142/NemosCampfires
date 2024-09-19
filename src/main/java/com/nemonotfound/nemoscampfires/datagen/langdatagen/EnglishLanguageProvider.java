@@ -3,18 +3,15 @@ package com.nemonotfound.nemoscampfires.datagen.langdatagen;
 import com.nemonotfound.nemoscampfires.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.core.HolderLookup;
-
-import java.util.concurrent.CompletableFuture;
 
 public class EnglishLanguageProvider extends FabricLanguageProvider {
 
-    public EnglishLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
-        super(dataOutput, registryLookup);
+    public EnglishLanguageProvider(FabricDataOutput dataOutput) {
+        super(dataOutput);
     }
 
     @Override
-    public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(ModBlocks.ACACIA_CAMPFIRE, "Acacia Campfire");
         translationBuilder.add(ModBlocks.ACACIA_SOUL_CAMPFIRE, "Acacia Soul Campfire");
         translationBuilder.add(ModBlocks.BIRCH_CAMPFIRE, "Birch Campfire");

@@ -8,7 +8,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -39,9 +39,8 @@ public class CustomCampfireBlock extends CampfireBlock {
     }
 
     @Override
-    protected @NotNull ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level,
-                                                       BlockPos blockPos, Player player, InteractionHand interactionHand,
-                                                       BlockHitResult blockHitResult) {
+    public @NotNull InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player,
+                                             InteractionHand interactionHand, BlockHitResult blockHitResult) {
         if (level.getBlockEntity(blockPos) instanceof CustomCampfireBlockEntity customCampfireBlockEntity) {
             ItemStack itemInHand = player.getItemInHand(interactionHand);
             Optional<RecipeHolder<CampfireCookingRecipe>> optionalRecipe = customCampfireBlockEntity
@@ -52,18 +51,18 @@ public class CustomCampfireBlock extends CampfireBlock {
                         ((CampfireCookingRecipe)((RecipeHolder)optionalRecipe.get()).value()).getCookingTime())) {
                     player.awardStat(Stats.INTERACT_WITH_CAMPFIRE);
 
-                    return ItemInteractionResult.SUCCESS;
+                    return InteractionResult.SUCCESS;
                 }
 
-                return ItemInteractionResult.CONSUME;
+                return InteractionResult.CONSUME;
             }
         }
 
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        return InteractionResult.PASS;
     }
 
     @Override
-    protected void onRemove(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
+    public void onRemove(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
         if (!blockState.is(blockState2.getBlock())) {
             BlockEntity blockEntity = level.getBlockEntity(blockPos);
 
