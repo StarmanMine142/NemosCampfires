@@ -49,7 +49,7 @@ public class ModCreativeModeTabs {
                 }))
                 .build();
 
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MOD_ID, MOD_ID), creativeModeTab);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MOD_ID, MOD_ID), creativeModeTab);
     }
 
     private static void modifyFunctionalBlocksCreativeModeTab() {

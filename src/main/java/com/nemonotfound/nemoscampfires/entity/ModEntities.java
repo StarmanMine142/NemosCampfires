@@ -11,7 +11,7 @@ import static com.nemonotfound.nemoscampfires.NemosCampfires.LOGGER;
 public class ModEntities {
 
     public static final BlockEntityType<CustomCampfireBlockEntity> CUSTOM_CAMPFIRE_BLOCK_ENTITY =
-            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, ResourceLocation.withDefaultNamespace("custom_campfire_block_entity"),
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, new ResourceLocation("minecraft", "custom_campfire_block_entity"),
                     BlockEntityType.Builder.of(CustomCampfireBlockEntity::new, ModBlocks.ACACIA_CAMPFIRE,
                             ModBlocks.ACACIA_SOUL_CAMPFIRE, ModBlocks.BIRCH_CAMPFIRE,
                             ModBlocks.BIRCH_SOUL_CAMPFIRE, ModBlocks.CHERRY_CAMPFIRE,

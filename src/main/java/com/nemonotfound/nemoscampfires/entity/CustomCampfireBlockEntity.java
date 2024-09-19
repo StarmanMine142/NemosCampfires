@@ -11,9 +11,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Clearable;
-import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.Containers;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemContainerContents;
@@ -33,7 +31,7 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
     private final NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
     private final int[] cookingProgress = new int[4];
     private final int[] cookingTime = new int[4];
-    private final RecipeManager.CachedCheck<SingleRecipeInput, CampfireCookingRecipe> quickCheck = RecipeManager.createCheck(RecipeType.CAMPFIRE_COOKING);
+    private final RecipeManager.CachedCheck<Container, CampfireCookingRecipe> quickCheck = RecipeManager.createCheck(RecipeType.CAMPFIRE_COOKING);
 
     public CustomCampfireBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModEntities.CUSTOM_CAMPFIRE_BLOCK_ENTITY, blockPos, blockState);
@@ -60,10 +58,10 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
 
     private static void handleCookedItem(Level level, BlockPos blockPos, BlockState blockState, CustomCampfireBlockEntity campfireBlockEntity, int i, ItemStack itemStack) {
         if (campfireBlockEntity.cookingProgress[i] >= campfireBlockEntity.cookingTime[i]) {
-            SingleRecipeInput singleRecipeInput = new SingleRecipeInput(itemStack);
+            Container container = new SimpleContainer(itemStack);
             ItemStack cookedItem = campfireBlockEntity.quickCheck
-                    .getRecipeFor(singleRecipeInput, level)
-                    .map(recipeHolder -> recipeHolder.value().assemble(singleRecipeInput, level.registryAccess()))
+                    .getRecipeFor(container, level)
+                    .map(recipeHolder -> recipeHolder.value().assemble(container, level.registryAccess()))
                     .orElse(itemStack);
 
             dropCookedItem(level, blockPos, blockState, campfireBlockEntity, cookedItem, i);
@@ -166,7 +164,7 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
 
     public Optional<RecipeHolder<CampfireCookingRecipe>> getCookableRecipe(ItemStack itemStack) {
         return this.items.stream().noneMatch(ItemStack::isEmpty) ? Optional.empty() :
-                this.quickCheck.getRecipeFor(new SingleRecipeInput(itemStack), this.level);
+                this.quickCheck.getRecipeFor(new SimpleContainer(itemStack), this.level);
     }
 
     public boolean placeFood(@Nullable LivingEntity livingEntity, ItemStack itemStack, int cookingTime) {
@@ -176,7 +174,7 @@ public class CustomCampfireBlockEntity extends BlockEntity implements Clearable 
             if (itemStack2.isEmpty()) {
                 this.cookingTime[j] = cookingTime;
                 this.cookingProgress[j] = 0;
-                this.items.set(j, itemStack.consumeAndReturn(1, livingEntity));
+                this.items.set(j, itemStack.split(1));
                 this.level.gameEvent(GameEvent.BLOCK_CHANGE, this.getBlockPos(), GameEvent.Context.of(livingEntity, this.getBlockState()));
                 this.markUpdated();
 

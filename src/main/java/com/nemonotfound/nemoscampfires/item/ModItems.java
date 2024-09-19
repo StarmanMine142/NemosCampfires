@@ -39,6 +39,6 @@ public class ModItems {
     private static Item registerBlockItem(String path, Block block) {
         BlockItem blockItem = new BlockItem(block, new Item.Properties());
 
-        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, path), blockItem);
+        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MOD_ID, path), blockItem);
     }
 }

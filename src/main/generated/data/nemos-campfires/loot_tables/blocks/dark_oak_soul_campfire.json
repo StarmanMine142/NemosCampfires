@@ -16,7 +16,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantments": "minecraft:silk_touch",
+                          "enchantment": "minecraft:silk_touch",
                           "levels": {
                             "min": 1
                           }
@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "nemos-campfires:acacia_soul_campfire"
+              "name": "nemos-campfires:dark_oak_soul_campfire"
             },
             {
               "type": "minecraft:item",

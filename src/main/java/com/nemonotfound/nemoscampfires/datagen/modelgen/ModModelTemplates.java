@@ -12,6 +12,6 @@ public class ModModelTemplates {
     public static final ModelTemplate CAMPFIRE_OFF = create("campfire_off", ModTextureSlot.LOG, TextureSlot.PARTICLE);
 
     private static ModelTemplate create(String string, TextureSlot... textureSlots) {
-        return new ModelTemplate(Optional.of(ResourceLocation.withDefaultNamespace("block/" + string)), Optional.empty(), textureSlots);
+        return new ModelTemplate(Optional.of(new ResourceLocation("minecraft", "block/" + string)), Optional.empty(), textureSlots);
     }
 }

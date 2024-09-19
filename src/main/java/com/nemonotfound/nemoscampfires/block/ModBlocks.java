@@ -50,6 +50,6 @@ public class ModBlocks {
     }
 
     private static Block registerBlock(String path, Block block) {
-        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, path), block);
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(MOD_ID, path), block);
     }
 }
