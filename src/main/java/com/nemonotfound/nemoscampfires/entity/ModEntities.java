@@ -1,9 +1,11 @@
 package com.nemonotfound.nemoscampfires.entity;
 
 import com.nemonotfound.nemoscampfires.block.ModBlocks;
+import net.minecraft.Util;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.datafix.fixes.References;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import static com.nemonotfound.nemoscampfires.NemosCampfires.LOGGER;
@@ -21,7 +23,8 @@ public class ModEntities {
                             ModBlocks.JUNGLE_SOUL_CAMPFIRE, ModBlocks.MANGROVE_CAMPFIRE,
                             ModBlocks.MANGROVE_SOUL_CAMPFIRE, ModBlocks.SPRUCE_CAMPFIRE,
                             ModBlocks.SPRUCE_SOUL_CAMPFIRE, ModBlocks.WARPED_CAMPFIRE,
-                            ModBlocks.WARPED_SOUL_CAMPFIRE).build());
+                            ModBlocks.WARPED_SOUL_CAMPFIRE)
+                            .build(Util.fetchChoiceType(References.BLOCK_ENTITY, "custom_campfire_block_entity")));
 
     public static void registerEntities() {
         LOGGER.info("Registering entities");

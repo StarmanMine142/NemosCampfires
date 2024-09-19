@@ -13,7 +13,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CampfireCookingRecipe;
-import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.CampfireBlock;
@@ -43,12 +42,10 @@ public class CustomCampfireBlock extends CampfireBlock {
                                              InteractionHand interactionHand, BlockHitResult blockHitResult) {
         if (level.getBlockEntity(blockPos) instanceof CustomCampfireBlockEntity customCampfireBlockEntity) {
             ItemStack itemInHand = player.getItemInHand(interactionHand);
-            Optional<RecipeHolder<CampfireCookingRecipe>> optionalRecipe = customCampfireBlockEntity
-                    .getCookableRecipe(itemInHand);
+            Optional<CampfireCookingRecipe> optionalRecipe = customCampfireBlockEntity.getCookableRecipe(itemInHand);
 
             if (optionalRecipe.isPresent()) {
-                if (!level.isClientSide && customCampfireBlockEntity.placeFood(player, itemInHand,
-                        ((CampfireCookingRecipe)((RecipeHolder)optionalRecipe.get()).value()).getCookingTime())) {
+                if (!level.isClientSide && customCampfireBlockEntity.placeFood(player, itemInHand, optionalRecipe.get().getCookingTime())) {
                     player.awardStat(Stats.INTERACT_WITH_CAMPFIRE);
 
                     return InteractionResult.SUCCESS;
