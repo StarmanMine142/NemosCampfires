@@ -50,13 +50,6 @@
       }
     },
     {
-      "structures": "#quad:is/bamboo",
-      "block_replacement": {
-        "targets": "minecraft:campfire",
-        "replacement": "nemos-campfires:bamboo_campfire"
-      }
-    },
-    {
       "structures": "#quad:is/crimson",
       "block_replacement": {
         "targets": "minecraft:campfire",
