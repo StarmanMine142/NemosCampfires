@@ -50,6 +50,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ").pattern("SCS").pattern("LLL")
                 .unlockedBy("has_stick", has(Items.STICK))
                 .unlockedBy("has_coal", has(ItemTags.COALS))
+                .group("campfires")
                 .save(exporter);
     }
 
@@ -58,6 +59,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .define('L', log).define('S', Items.STICK).define('#', ItemTags.SOUL_FIRE_BASE_BLOCKS)
                 .pattern(" S ").pattern("S#S").pattern("LLL")
                 .unlockedBy("has_soul_sand", has(ItemTags.SOUL_FIRE_BASE_BLOCKS))
+                .group("soul_campfires")
                 .save(exporter);
     }
 }

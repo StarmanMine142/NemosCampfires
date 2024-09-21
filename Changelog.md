@@ -1,7 +1,12 @@
-# Changelog - v1.0
+# Changelog - v1.1
 
 ## Additions
-- Added Campfires for all wood types (except bamboo)
+- Added compatibility for [Quad](https://www.curseforge.com/minecraft/mc-mods/quad)
+
+## Changes
+- Put all campfire recipes to groups
+  - campfires
+  - soul_campfires
 
 ### Downloads
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/nemos-campfires) <br>
