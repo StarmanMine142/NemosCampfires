@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "campfires",
   "key": {
     "C": {
       "tag": "minecraft:coals"
