@@ -1,12 +1,7 @@
-# Changelog - v1.1
-
-## Additions
-- Added compatibility for [Quad](https://www.curseforge.com/minecraft/mc-mods/quad)
+# Changelog - v1.2
 
 ## Changes
-- Put all campfire recipes to groups
-  - campfires
-  - soul_campfires
+- Adapted campfire & soul campfire recipe to use oak wood
 
 ### Downloads
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/nemos-campfires) <br>
