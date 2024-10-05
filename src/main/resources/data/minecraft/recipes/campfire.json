@@ -19,7 +19,6 @@
     "LLL"
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:campfire"
+    "item": "minecraft:campfire"
   }
 }
