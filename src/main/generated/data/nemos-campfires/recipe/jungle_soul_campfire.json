@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "soul_campfires",
   "key": {
-    "#": {
-      "tag": "minecraft:soul_fire_base_blocks"
-    },
-    "L": {
-      "tag": "minecraft:jungle_logs"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "#": "#minecraft:soul_fire_base_blocks",
+    "L": "#minecraft:jungle_logs",
+    "S": "minecraft:stick"
   },
   "pattern": [
     " S ",

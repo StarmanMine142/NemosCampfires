@@ -1,13 +1,17 @@
 package com.nemonotfound.nemoscampfires.block;
 
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+
+import java.util.function.Function;
 
 import static com.nemonotfound.nemoscampfires.NemosCampfires.LOGGER;
 import static com.nemonotfound.nemoscampfires.NemosCampfires.MOD_ID;
@@ -15,24 +19,24 @@ import static net.minecraft.world.level.block.Blocks.*;
 
 public class ModBlocks {
 
-    public static final Block ACACIA_CAMPFIRE = registerBlock("acacia_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(ACACIA_LOG.defaultMapColor(), 15)));
-    public static final Block BIRCH_CAMPFIRE = registerBlock("birch_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(BIRCH_LOG.defaultMapColor(), 15)));
-    public static final Block CHERRY_CAMPFIRE = registerBlock("cherry_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(CHERRY_LOG.defaultMapColor(), 15)));
-    public static final Block CRIMSON_CAMPFIRE = registerBlock("crimson_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(CRIMSON_STEM.defaultMapColor(), 15)));
-    public static final Block DARK_OAK_CAMPFIRE = registerBlock("dark_oak_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(DARK_OAK_LOG.defaultMapColor(), 15)));
-    public static final Block JUNGLE_CAMPFIRE = registerBlock("jungle_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(JUNGLE_LOG.defaultMapColor(), 15)));
-    public static final Block MANGROVE_CAMPFIRE = registerBlock("mangrove_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(MANGROVE_LOG.defaultMapColor(), 15)));
-    public static final Block SPRUCE_CAMPFIRE = registerBlock("spruce_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(SPRUCE_LOG.defaultMapColor(), 15)));
-    public static final Block WARPED_CAMPFIRE = registerBlock("warped_campfire", new CustomCampfireBlock(true, 1, createCampfireProperties(WARPED_STEM.defaultMapColor(), 15)));
-    public static final Block ACACIA_SOUL_CAMPFIRE = registerBlock("acacia_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(ACACIA_LOG.defaultMapColor(), 10)));
-    public static final Block BIRCH_SOUL_CAMPFIRE = registerBlock("birch_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(BIRCH_LOG.defaultMapColor(), 10)));
-    public static final Block CHERRY_SOUL_CAMPFIRE = registerBlock("cherry_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(CHERRY_LOG.defaultMapColor(), 10)));
-    public static final Block CRIMSON_SOUL_CAMPFIRE = registerBlock("crimson_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(CRIMSON_STEM.defaultMapColor(), 10)));
-    public static final Block DARK_OAK_SOUL_CAMPFIRE = registerBlock("dark_oak_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(DARK_OAK_LOG.defaultMapColor(), 10)));
-    public static final Block JUNGLE_SOUL_CAMPFIRE = registerBlock("jungle_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(JUNGLE_LOG.defaultMapColor(), 10)));
-    public static final Block MANGROVE_SOUL_CAMPFIRE = registerBlock("mangrove_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(MANGROVE_LOG.defaultMapColor(), 10)));
-    public static final Block SPRUCE_SOUL_CAMPFIRE = registerBlock("spruce_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(SPRUCE_LOG.defaultMapColor(), 10)));
-    public static final Block WARPED_SOUL_CAMPFIRE = registerBlock("warped_soul_campfire", new CustomCampfireBlock(false, 2, createCampfireProperties(WARPED_STEM.defaultMapColor(), 10)));
+    public static final Block ACACIA_CAMPFIRE = register("acacia_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(ACACIA_LOG.defaultMapColor(), 15));
+    public static final Block BIRCH_CAMPFIRE = register("birch_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(BIRCH_LOG.defaultMapColor(), 15));
+    public static final Block CHERRY_CAMPFIRE = register("cherry_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(CHERRY_LOG.defaultMapColor(), 15));
+    public static final Block CRIMSON_CAMPFIRE = register("crimson_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(CRIMSON_STEM.defaultMapColor(), 15));
+    public static final Block DARK_OAK_CAMPFIRE = register("dark_oak_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(DARK_OAK_LOG.defaultMapColor(), 15));
+    public static final Block JUNGLE_CAMPFIRE = register("jungle_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(JUNGLE_LOG.defaultMapColor(), 15));
+    public static final Block MANGROVE_CAMPFIRE = register("mangrove_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(MANGROVE_LOG.defaultMapColor(), 15));
+    public static final Block SPRUCE_CAMPFIRE = register("spruce_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(SPRUCE_LOG.defaultMapColor(), 15));
+    public static final Block WARPED_CAMPFIRE = register("warped_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(WARPED_STEM.defaultMapColor(), 15));
+    public static final Block ACACIA_SOUL_CAMPFIRE = register("acacia_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(ACACIA_LOG.defaultMapColor(), 10));
+    public static final Block BIRCH_SOUL_CAMPFIRE = register("birch_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(BIRCH_LOG.defaultMapColor(), 10));
+    public static final Block CHERRY_SOUL_CAMPFIRE = register("cherry_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(CHERRY_LOG.defaultMapColor(), 10));
+    public static final Block CRIMSON_SOUL_CAMPFIRE = register("crimson_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(CRIMSON_STEM.defaultMapColor(), 10));
+    public static final Block DARK_OAK_SOUL_CAMPFIRE = register("dark_oak_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(DARK_OAK_LOG.defaultMapColor(), 10));
+    public static final Block JUNGLE_SOUL_CAMPFIRE = register("jungle_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(JUNGLE_LOG.defaultMapColor(), 10));
+    public static final Block MANGROVE_SOUL_CAMPFIRE = register("mangrove_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(MANGROVE_LOG.defaultMapColor(), 10));
+    public static final Block SPRUCE_SOUL_CAMPFIRE = register("spruce_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(SPRUCE_LOG.defaultMapColor(), 10));
+    public static final Block WARPED_SOUL_CAMPFIRE = register("warped_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(WARPED_STEM.defaultMapColor(), 10));
 
     public static void registerBlocks() {
         LOGGER.info("Registering blocks");
@@ -49,7 +53,11 @@ public class ModBlocks {
                 .ignitedByLava();
     }
 
-    private static Block registerBlock(String path, Block block) {
-        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, path), block);
+    private static Block register(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+        return Blocks.register(keyOf(path), factory, properties);
+    }
+
+    private static ResourceKey<Block> keyOf(String path) {
+        return ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, path));
     }
 }

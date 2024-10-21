@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "soul_campfires",
   "key": {
-    "#": {
-      "tag": "minecraft:soul_fire_base_blocks"
-    },
-    "L": {
-      "tag": "minecraft:crimson_stems"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "#": "#minecraft:soul_fire_base_blocks",
+    "L": "#minecraft:crimson_stems",
+    "S": "minecraft:stick"
   },
   "pattern": [
     " S ",

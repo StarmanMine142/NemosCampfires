@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "campfires",
   "key": {
-    "C": {
-      "tag": "minecraft:coals"
-    },
-    "L": {
-      "tag": "minecraft:warped_stems"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "C": "#minecraft:coals",
+    "L": "#minecraft:warped_stems",
+    "S": "minecraft:stick"
   },
   "pattern": [
     " S ",

@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static com.nemonotfound.nemoscampfires.block.ModBlocks.registerBlocks;
-import static com.nemonotfound.nemoscampfires.entity.ModEntities.registerEntities;
+import static com.nemonotfound.nemoscampfires.entity.ModBlockEntityType.registerBlockEntityTypes;
 import static com.nemonotfound.nemoscampfires.item.ModCreativeModeTabs.registerCreativeModeTabs;
 import static com.nemonotfound.nemoscampfires.item.ModItems.registerItems;
 
@@ -22,6 +22,6 @@ public class NemosCampfires implements ModInitializer {
 		registerBlocks();
 		registerItems();
 		registerCreativeModeTabs();
-		registerEntities();
+		registerBlockEntityTypes();
 	}
 }
