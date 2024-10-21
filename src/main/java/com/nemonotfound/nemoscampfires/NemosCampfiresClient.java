@@ -27,7 +27,5 @@ public class NemosCampfiresClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANGROVE_SOUL_CAMPFIRE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPRUCE_SOUL_CAMPFIRE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_SOUL_CAMPFIRE, RenderType.cutout());
-
-        //BlockEntityRenderers.register(ModBlockEntityType.CUSTOM_CAMPFIRE_BLOCK_ENTITY, CustomCampfireBlockEntityRenderer::new);
     }
 }
