@@ -31,7 +31,7 @@ public class BlockEntityTypeMixin<T extends BlockEntity> implements BlockEntityT
     }
 
     @Override
-    public void addSupportedBlock(Block block) {
+    public void nemo_sCampfires$addSupportedBlock(Block block) {
         Objects.requireNonNull(block, "block");
         validBlocks.add(block);
     }

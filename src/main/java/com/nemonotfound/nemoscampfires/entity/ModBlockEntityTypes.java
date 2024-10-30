@@ -10,23 +10,23 @@ public class ModBlockEntityTypes {
     public static void registerEntities() {
         LOGGER.info("Registering block entity types");
 
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.ACACIA_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.BIRCH_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CHERRY_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CRIMSON_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.DARK_OAK_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.JUNGLE_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.MANGROVE_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.SPRUCE_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.WARPED_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.ACACIA_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.BIRCH_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CHERRY_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CRIMSON_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.DARK_OAK_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.JUNGLE_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.MANGROVE_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.SPRUCE_SOUL_CAMPFIRE);
-        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.WARPED_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.ACACIA_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.BIRCH_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.CHERRY_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.CRIMSON_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.DARK_OAK_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.JUNGLE_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.MANGROVE_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.SPRUCE_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.WARPED_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.ACACIA_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.BIRCH_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.CHERRY_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.CRIMSON_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.DARK_OAK_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.JUNGLE_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.MANGROVE_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.SPRUCE_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.nemo_sCampfires$addSupportedBlock(ModBlocks.WARPED_SOUL_CAMPFIRE);
     }
 }

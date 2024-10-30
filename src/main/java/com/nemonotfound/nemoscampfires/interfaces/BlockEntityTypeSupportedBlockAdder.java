@@ -4,5 +4,5 @@ import net.minecraft.world.level.block.Block;
 
 public interface BlockEntityTypeSupportedBlockAdder {
 
-    default void addSupportedBlock(Block block) {}
+    default void nemo_sCampfires$addSupportedBlock(Block block) {}
 }
