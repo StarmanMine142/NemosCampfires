@@ -16,6 +16,8 @@ public class ModBlockEntityType {
         BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.BIRCH_SOUL_CAMPFIRE);
         BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CHERRY_CAMPFIRE);
         BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CHERRY_SOUL_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.PALE_OAK_CAMPFIRE);
+        BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.PALE_OAK_SOUL_CAMPFIRE);
         BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CRIMSON_CAMPFIRE);
         BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.CRIMSON_SOUL_CAMPFIRE);
         BlockEntityType.CAMPFIRE.addSupportedBlock(ModBlocks.DARK_OAK_CAMPFIRE);

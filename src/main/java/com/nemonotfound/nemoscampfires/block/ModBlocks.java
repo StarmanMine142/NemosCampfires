@@ -22,6 +22,7 @@ public class ModBlocks {
     public static final Block ACACIA_CAMPFIRE = register("acacia_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(ACACIA_LOG.defaultMapColor(), 15));
     public static final Block BIRCH_CAMPFIRE = register("birch_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(BIRCH_LOG.defaultMapColor(), 15));
     public static final Block CHERRY_CAMPFIRE = register("cherry_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(CHERRY_LOG.defaultMapColor(), 15));
+    public static final Block PALE_OAK_CAMPFIRE = register("pale_oak_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(PALE_OAK_LOG.defaultMapColor(), 15));
     public static final Block CRIMSON_CAMPFIRE = register("crimson_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(CRIMSON_STEM.defaultMapColor(), 15));
     public static final Block DARK_OAK_CAMPFIRE = register("dark_oak_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(DARK_OAK_LOG.defaultMapColor(), 15));
     public static final Block JUNGLE_CAMPFIRE = register("jungle_campfire", properties -> new CampfireBlock(true, 1, properties), createCampfireProperties(JUNGLE_LOG.defaultMapColor(), 15));
@@ -31,6 +32,7 @@ public class ModBlocks {
     public static final Block ACACIA_SOUL_CAMPFIRE = register("acacia_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(ACACIA_LOG.defaultMapColor(), 10));
     public static final Block BIRCH_SOUL_CAMPFIRE = register("birch_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(BIRCH_LOG.defaultMapColor(), 10));
     public static final Block CHERRY_SOUL_CAMPFIRE = register("cherry_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(CHERRY_LOG.defaultMapColor(), 10));
+    public static final Block PALE_OAK_SOUL_CAMPFIRE = register("pale_oak_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(PALE_OAK_LOG.defaultMapColor(), 10));
     public static final Block CRIMSON_SOUL_CAMPFIRE = register("crimson_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(CRIMSON_STEM.defaultMapColor(), 10));
     public static final Block DARK_OAK_SOUL_CAMPFIRE = register("dark_oak_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(DARK_OAK_LOG.defaultMapColor(), 10));
     public static final Block JUNGLE_SOUL_CAMPFIRE = register("jungle_soul_campfire", properties -> new CampfireBlock(false, 2, properties), createCampfireProperties(JUNGLE_LOG.defaultMapColor(), 10));

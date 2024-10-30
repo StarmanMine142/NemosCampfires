@@ -14,6 +14,7 @@ public class ModItems {
     public static final Item ACACIA_CAMPFIRE = registerCampfireBlockItem(ModBlocks.ACACIA_CAMPFIRE);
     public static final Item BIRCH_CAMPFIRE = registerCampfireBlockItem(ModBlocks.BIRCH_CAMPFIRE);
     public static final Item CHERRY_CAMPFIRE = registerCampfireBlockItem(ModBlocks.CHERRY_CAMPFIRE);
+    public static final Item PALE_OAK_CAMPFIRE = registerCampfireBlockItem(ModBlocks.PALE_OAK_CAMPFIRE);
     public static final Item CRIMSON_CAMPFIRE = registerCampfireBlockItem(ModBlocks.CRIMSON_CAMPFIRE);
     public static final Item DARK_OAK_CAMPFIRE = registerCampfireBlockItem(ModBlocks.DARK_OAK_CAMPFIRE);
     public static final Item JUNGLE_CAMPFIRE = registerCampfireBlockItem(ModBlocks.JUNGLE_CAMPFIRE);
@@ -23,6 +24,7 @@ public class ModItems {
     public static final Item ACACIA_SOUL_CAMPFIRE = registerCampfireBlockItem(ModBlocks.ACACIA_SOUL_CAMPFIRE);
     public static final Item BIRCH_SOUL_CAMPFIRE = registerCampfireBlockItem(ModBlocks.BIRCH_SOUL_CAMPFIRE);
     public static final Item CHERRY_SOUL_CAMPFIRE = registerCampfireBlockItem(ModBlocks.CHERRY_SOUL_CAMPFIRE);
+    public static final Item PALE_OAK_SOUL_CAMPFIRE = registerCampfireBlockItem(ModBlocks.PALE_OAK_SOUL_CAMPFIRE);
     public static final Item CRIMSON_SOUL_CAMPFIRE = registerCampfireBlockItem(ModBlocks.CRIMSON_SOUL_CAMPFIRE);
     public static final Item DARK_OAK_SOUL_CAMPFIRE = registerCampfireBlockItem(ModBlocks.DARK_OAK_SOUL_CAMPFIRE);
     public static final Item JUNGLE_SOUL_CAMPFIRE = registerCampfireBlockItem(ModBlocks.JUNGLE_SOUL_CAMPFIRE);

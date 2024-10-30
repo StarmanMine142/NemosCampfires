@@ -25,6 +25,7 @@ public class ModelProvider extends FabricModelProvider {
         createCampfires(blockStateModelGenerator, ModBlocks.ACACIA_CAMPFIRE, ModBlocks.ACACIA_SOUL_CAMPFIRE);
         createCampfires(blockStateModelGenerator, ModBlocks.BIRCH_CAMPFIRE, ModBlocks.BIRCH_SOUL_CAMPFIRE);
         createCampfires(blockStateModelGenerator, ModBlocks.CHERRY_CAMPFIRE, ModBlocks.CHERRY_SOUL_CAMPFIRE);
+        createCampfires(blockStateModelGenerator, ModBlocks.PALE_OAK_CAMPFIRE, ModBlocks.PALE_OAK_SOUL_CAMPFIRE);
         createCampfires(blockStateModelGenerator, ModBlocks.CRIMSON_CAMPFIRE, ModBlocks.CRIMSON_SOUL_CAMPFIRE);
         createCampfires(blockStateModelGenerator, ModBlocks.DARK_OAK_CAMPFIRE, ModBlocks.DARK_OAK_SOUL_CAMPFIRE);
         createCampfires(blockStateModelGenerator, ModBlocks.JUNGLE_CAMPFIRE, ModBlocks.JUNGLE_SOUL_CAMPFIRE);

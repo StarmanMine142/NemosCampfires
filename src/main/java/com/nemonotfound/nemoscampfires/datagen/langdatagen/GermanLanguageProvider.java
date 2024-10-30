@@ -21,6 +21,8 @@ public class GermanLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.BIRCH_SOUL_CAMPFIRE, "Birkenseelenlagerfeuer");
         translationBuilder.add(ModBlocks.CHERRY_CAMPFIRE, "Kirschlagerfeuer");
         translationBuilder.add(ModBlocks.CHERRY_SOUL_CAMPFIRE, "Kirschseelenlagerfeuer");
+        translationBuilder.add(ModBlocks.PALE_OAK_CAMPFIRE, "Blasseichenlagerfeuer");
+        translationBuilder.add(ModBlocks.PALE_OAK_SOUL_CAMPFIRE, "Blasseichenseelenlagerfeuer");
         translationBuilder.add(ModBlocks.CRIMSON_CAMPFIRE, "Karmesinlagerfeuer");
         translationBuilder.add(ModBlocks.CRIMSON_SOUL_CAMPFIRE, "Karmesinseelenlagerfeuer");
         translationBuilder.add(ModBlocks.DARK_OAK_CAMPFIRE, "Schwarzeichenlagerfeuer");

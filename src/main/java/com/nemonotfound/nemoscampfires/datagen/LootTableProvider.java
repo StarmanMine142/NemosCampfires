@@ -29,6 +29,9 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         this.add(ModBlocks.CHERRY_CAMPFIRE, (Block block) -> this.createSilkTouchDispatchTable(block,
                 this.applyExplosionCondition(block, LootItem.lootTableItem(Items.CHARCOAL)
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0f))))));
+        this.add(ModBlocks.PALE_OAK_CAMPFIRE, (Block block) -> this.createSilkTouchDispatchTable(block,
+                this.applyExplosionCondition(block, LootItem.lootTableItem(Items.CHARCOAL)
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0f))))));
         this.add(ModBlocks.CRIMSON_CAMPFIRE, (Block block) -> this.createSilkTouchDispatchTable(block,
                 this.applyExplosionCondition(block, LootItem.lootTableItem(Items.CHARCOAL)
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0f))))));
@@ -54,6 +57,9 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
                 this.applyExplosionCondition(block, LootItem.lootTableItem(Items.SOUL_SOIL)
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f))))));
         this.add(ModBlocks.CHERRY_SOUL_CAMPFIRE, (Block block) -> this.createSilkTouchDispatchTable(block,
+                this.applyExplosionCondition(block, LootItem.lootTableItem(Items.SOUL_SOIL)
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f))))));
+        this.add(ModBlocks.PALE_OAK_SOUL_CAMPFIRE, (Block block) -> this.createSilkTouchDispatchTable(block,
                 this.applyExplosionCondition(block, LootItem.lootTableItem(Items.SOUL_SOIL)
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f))))));
         this.add(ModBlocks.CRIMSON_SOUL_CAMPFIRE, (Block block) -> this.createSilkTouchDispatchTable(block,

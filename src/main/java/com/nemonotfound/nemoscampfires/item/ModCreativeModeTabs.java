@@ -42,6 +42,8 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.MANGROVE_SOUL_CAMPFIRE);
                     output.accept(ModItems.CHERRY_CAMPFIRE);
                     output.accept(ModItems.CHERRY_SOUL_CAMPFIRE);
+                    output.accept(ModItems.PALE_OAK_CAMPFIRE);
+                    output.accept(ModItems.PALE_OAK_SOUL_CAMPFIRE);
                     output.accept(ModItems.CRIMSON_CAMPFIRE);
                     output.accept(ModItems.CRIMSON_SOUL_CAMPFIRE);
                     output.accept(ModItems.WARPED_CAMPFIRE);
@@ -58,6 +60,8 @@ public class ModCreativeModeTabs {
             entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.WARPED_CAMPFIRE);
             entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.CRIMSON_SOUL_CAMPFIRE);
             entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.CRIMSON_CAMPFIRE);
+            entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.PALE_OAK_SOUL_CAMPFIRE);
+            entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.PALE_OAK_CAMPFIRE);
             entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.CHERRY_SOUL_CAMPFIRE);
             entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.CHERRY_CAMPFIRE);
             entries.addAfter(Items.SOUL_CAMPFIRE, ModItems.MANGROVE_SOUL_CAMPFIRE);

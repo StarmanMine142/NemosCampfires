@@ -21,6 +21,8 @@ public class EnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.BIRCH_SOUL_CAMPFIRE, "Birch Soul Campfire");
         translationBuilder.add(ModBlocks.CHERRY_CAMPFIRE, "Cherry Campfire");
         translationBuilder.add(ModBlocks.CHERRY_SOUL_CAMPFIRE, "Cherry Soul Campfire");
+        translationBuilder.add(ModBlocks.PALE_OAK_CAMPFIRE, "Pale Oak Campfire");
+        translationBuilder.add(ModBlocks.PALE_OAK_SOUL_CAMPFIRE, "Pale Oak Soul Campfire");
         translationBuilder.add(ModBlocks.CRIMSON_CAMPFIRE, "Crimson Campfire");
         translationBuilder.add(ModBlocks.CRIMSON_SOUL_CAMPFIRE, "Crimson Soul Campfire");
         translationBuilder.add(ModBlocks.DARK_OAK_CAMPFIRE, "Dark Oak Campfire");

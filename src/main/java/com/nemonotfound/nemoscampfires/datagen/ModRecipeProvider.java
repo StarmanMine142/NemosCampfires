@@ -30,6 +30,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createCampfireRecipe(ModBlocks.ACACIA_CAMPFIRE, ItemTags.ACACIA_LOGS);
                 createCampfireRecipe(ModBlocks.BIRCH_CAMPFIRE, ItemTags.BIRCH_LOGS);
                 createCampfireRecipe(ModBlocks.CHERRY_CAMPFIRE, ItemTags.CHERRY_LOGS);
+                createCampfireRecipe(ModBlocks.PALE_OAK_CAMPFIRE, ItemTags.PALE_OAK_LOGS);
                 createCampfireRecipe(ModBlocks.CRIMSON_CAMPFIRE, ItemTags.CRIMSON_STEMS);
                 createCampfireRecipe(ModBlocks.DARK_OAK_CAMPFIRE, ItemTags.DARK_OAK_LOGS);
                 createCampfireRecipe(ModBlocks.JUNGLE_CAMPFIRE, ItemTags.JUNGLE_LOGS);
@@ -40,6 +41,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createSoulCampfireRecipe(ModBlocks.ACACIA_SOUL_CAMPFIRE, ItemTags.ACACIA_LOGS);
                 createSoulCampfireRecipe(ModBlocks.BIRCH_SOUL_CAMPFIRE, ItemTags.BIRCH_LOGS);
                 createSoulCampfireRecipe(ModBlocks.CHERRY_SOUL_CAMPFIRE, ItemTags.CHERRY_LOGS);
+                createSoulCampfireRecipe(ModBlocks.PALE_OAK_SOUL_CAMPFIRE, ItemTags.PALE_OAK_LOGS);
                 createSoulCampfireRecipe(ModBlocks.CRIMSON_SOUL_CAMPFIRE, ItemTags.CRIMSON_STEMS);
                 createSoulCampfireRecipe(ModBlocks.DARK_OAK_SOUL_CAMPFIRE, ItemTags.DARK_OAK_LOGS);
                 createSoulCampfireRecipe(ModBlocks.JUNGLE_SOUL_CAMPFIRE, ItemTags.JUNGLE_LOGS);
