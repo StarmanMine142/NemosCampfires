@@ -25,6 +25,9 @@
 			"com.nemonotfound.nemoscampfires.NemosCampfiresDataGenerator"
 		]
 	},
+	"mixins": [
+		"nemos-campfires.mixins.json"
+	],
 	"depends": {
 		"fabricloader": ">=0.16.5",
 		"minecraft": [
@@ -35,5 +38,12 @@
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_2591": [
+				"com/nemonotfound/nemoscampfires/interfaces/BlockEntityTypeSupportedBlockAdder"
+			]
+		}
 	}
 }

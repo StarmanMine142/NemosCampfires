@@ -1,7 +1,8 @@
-# Changelog - v1.2
+# Changelog - v1.2.1
 
 ## Changes
-- Adapted campfire & soul campfire recipe to use oak wood
+- Changed how campfires work internally
+  - makes the campfires compatible to other mods
 
 ### Downloads
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/nemos-campfires) <br>
