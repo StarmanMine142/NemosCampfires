@@ -1,7 +1,7 @@
 package com.nemonotfound.nemoscampfires.datagen.modelgen;
 
-import net.minecraft.data.models.model.ModelTemplate;
-import net.minecraft.data.models.model.TextureSlot;
+import net.minecraft.client.data.models.model.ModelTemplate;
+import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
 
 import java.util.Optional;

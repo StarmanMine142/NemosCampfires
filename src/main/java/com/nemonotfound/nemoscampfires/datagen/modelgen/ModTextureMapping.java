@@ -1,10 +1,11 @@
 package com.nemonotfound.nemoscampfires.datagen.modelgen;
 
-import net.minecraft.data.models.model.TextureMapping;
-import net.minecraft.data.models.model.TextureSlot;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.world.level.block.Block;
 
-import static net.minecraft.data.models.model.TextureMapping.getBlockTexture;
+import static net.minecraft.client.data.models.model.TextureMapping.getBlockTexture;
+
 
 public class ModTextureMapping {
 

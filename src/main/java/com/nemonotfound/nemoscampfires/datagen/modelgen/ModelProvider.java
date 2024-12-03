@@ -1,18 +1,18 @@
 package com.nemonotfound.nemoscampfires.datagen.modelgen;
 
 import com.nemonotfound.nemoscampfires.block.ModBlocks;
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.models.BlockModelGenerators;
-import net.minecraft.data.models.ItemModelGenerators;
-import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
-import static net.minecraft.data.models.BlockModelGenerators.createBooleanModelDispatch;
-import static net.minecraft.data.models.BlockModelGenerators.createHorizontalFacingDispatchAlt;
+import static net.minecraft.client.data.models.BlockModelGenerators.createBooleanModelDispatch;
+import static net.minecraft.client.data.models.BlockModelGenerators.createHorizontalFacingDispatchAlt;
 
 public class ModelProvider extends FabricModelProvider {
 
@@ -48,7 +48,7 @@ public class ModelProvider extends FabricModelProvider {
     }
 
     private static void createCampfire(BlockModelGenerators blockModelGenerators, Block campfireVariant, ResourceLocation campfireResourceLocation, ResourceLocation campfireOffResourceLocation) {
-        blockModelGenerators.createSimpleFlatItemModel(campfireVariant.asItem());
+        blockModelGenerators.registerSimpleFlatItemModel(campfireVariant.asItem());
         blockModelGenerators.blockStateOutput
                 .accept(MultiVariantGenerator.multiVariant(campfireVariant)
                         .with(createBooleanModelDispatch(BlockStateProperties.LIT, campfireResourceLocation, campfireOffResourceLocation))

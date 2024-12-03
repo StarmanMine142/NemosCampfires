@@ -6,7 +6,3 @@
 
 # Changes
 - Slightly adapted almost every campfire item texture
-
-### Downloads
-[CurseForge](https://www.curseforge.com/minecraft/mc-mods/nemos-campfires) <br>
-[Modrinth](https://modrinth.com/mod/nemos-campfires)
